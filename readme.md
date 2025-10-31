@@ -104,4 +104,5 @@ It supports **multiple concurrent users** with **role-based access control** and
 
 The UML class diagram illustrating relationships among **Customer**, **Employee**, **Manager**, **Loan**, **Admin**, **Transactions**, and **Feedback** modules:
 
-> `class_diagram.png`
+<p align="center"> <img src="class_diagram.png" alt="Class Diagram" width="700"> </p>
+

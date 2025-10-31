@@ -11,27 +11,27 @@ It supports **multiple concurrent users** with **role-based access control** and
 
 #### Customer
 
-* View balance, deposit/withdraw money, transfer funds
-* Apply for loans and view loan status
-* View transaction history and give feedback
-* Change password and manage profile
+- View balance, deposit/withdraw money, transfer funds
+- Apply for loans and view loan status
+- View transaction history and give feedback
+- Change password and manage profile
 
 #### Employee
 
-* Add or modify customer accounts
-* Approve/reject loans assigned by the manager
-* View customer details and transaction records
+- Add or modify customer accounts
+- Approve/reject loans assigned by the manager
+- View customer details and transaction records
 
 #### Manager
 
-* Activate or deactivate customer accounts
-* Assign loan requests to employees
-* Review customer feedback
+- Activate or deactivate customer accounts
+- Assign loan requests to employees
+- Review customer feedback
 
 #### Administrator
 
-* Manage employee accounts and user roles
-* Create or modify employees
+- Manage employee accounts and user roles
+- Create or modify employees
 
 ---
 
@@ -57,16 +57,17 @@ It supports **multiple concurrent users** with **role-based access control** and
 
 4. **Login Details**
 
-   * **Initial Admin Credentials:**
+   - **Initial Admin Credentials:**
 
-     * **Username:** `E001`
-     * **Password:** `admin`
-   * The administrator can then create additional employee and customer accounts.
+     - **Username:** `E001`
+     - **Password:** `admin`
+
+   - The administrator can then create additional employee and customer accounts.
 
 5. **Multiple Clients**
 
-   * Multiple clients can connect to the same server concurrently.
-   * Each user session is **isolated** and **independently managed**.
+   - Multiple clients can connect to the same server concurrently.
+   - Each user session is **isolated** and **independently managed**.
 
 ---
 
@@ -88,15 +89,15 @@ It supports **multiple concurrent users** with **role-based access control** and
 
 ### **Concurrency, Synchronization & ACID Properties**
 
-* **File Locking** – Prevents concurrent write operations, ensuring consistency across account, transaction, and loan records.
-* **Shared Memory** – Tracks active user sessions and prevents multiple logins for the same account.
-* **Session Handling** – Each client session is handled in a separate process to maintain isolation.
-* **ACID Compliance:**
+- **File Locking** – Prevents concurrent write operations, ensuring consistency across account, transaction, and loan records.
+- **Shared Memory** – Tracks active user sessions and prevents multiple logins for the same account.
+- **Session Handling** – Each client session is handled in a separate process to maintain isolation.
+- **ACID Compliance:**
 
-  * **Atomicity:** Transactions (deposit, withdrawal, loan approval) complete fully or not at all.
-  * **Consistency:** Validation and locking maintain consistent system state.
-  * **Isolation:** Concurrent users operate independently without interference.
-  * **Durability:** Changes are written immediately to files using `fsync()`.
+  - **Atomicity:** Transactions (deposit, withdrawal, loan approval) complete fully or not at all.
+  - **Consistency:** Validation and locking maintain consistent system state.
+  - **Isolation:** Concurrent users operate independently without interference.
+  - **Durability:** Changes are written immediately to files using `fsync()`.
 
 ---
 
@@ -104,5 +105,4 @@ It supports **multiple concurrent users** with **role-based access control** and
 
 The UML class diagram illustrating relationships among **Customer**, **Employee**, **Manager**, **Loan**, **Admin**, **Transactions**, and **Feedback** modules:
 
-<p align="center"> <img src="class_diagram.png" alt="Class Diagram" width="700"> </p>
-
+![Class Diagram](./class_diagram.png)

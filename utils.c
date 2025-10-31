@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include "utils.h"
 
+// Reads a single line from file descriptor into buffer
 int read_line(int fd, char *buffer) {
     char c;
     int i = 0;
@@ -19,6 +20,7 @@ int read_line(int fd, char *buffer) {
     return (i > 0);
 }
 
+// Removes trailing newline or carriage return from string
 void trim_newline(char *str) {
     int len = strlen(str);
     if (len > 0 && (str[len - 1] == '\n' || str[len - 1] == '\r'))
